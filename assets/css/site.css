@@ -337,3 +337,10 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .top-n .lang { opacity: .9; padding: .45rem .6rem; border: 1px solid rgba(243, 245, 242, .35); border-radius: 999px; font-size: .8rem; letter-spacing: 0; }
 .top-n .lang:hover { opacity: 1; border-color: var(--firn); }
 @media (max-width: 720px) { .top-n a.lang { display: inline-block; } }
+/* licznik wysokości: liczba i napis „W drodze” zajmują to samo pole, więc wykres nie zmienia szerokości ani położenia */
+.alti { display: grid; grid-template-columns: auto; justify-items: start; align-items: end; }
+.alti-n, .alti-r { grid-area: 1 / 1; }
+.alti-r { display: block; visibility: hidden; white-space: nowrap; font-size: clamp(1.3rem, 3.4vw, 2.9rem); }
+.alti.is-road .alti-n, .alti.is-road .alti-u { display: block; visibility: hidden; }
+.alti.is-road .alti-r { visibility: visible; }
+@media (max-width: 860px) { .alti-r { font-size: 1rem; } }
