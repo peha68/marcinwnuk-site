@@ -12,7 +12,7 @@ Instrukcja dla Claude Code. Odpowiadaj po polsku. Właściciel: Marcin Wnuk (Git
 - `/poradnik/`: indeks i sześć artykułów (`rezerwacja-gouter-tete-rousse`, `ile-kosztuje-mont-blanc`, `mont-blanc-droga-normalna-dzien-po-dniu`, `aklimatyzacja-gran-paradiso`, `sprzet-na-mont-blanc`, `bledy-na-mont-blanc`). Treść to fragmenty ebooka; nowe artykuły też tylko z tekstu ebooka. Każdy nowy adres dopisz do `sitemap.xml`. `/mb/index.html`: przekierowanie na `https://mb.marcinwnuk.pl/` (strona aktualizacji i plików, cel kodów QR). `/index.html` przekierowuje na `/mont-blanc/`. `404.html`, `CNAME` (marcinwnuk.pl), `.nojekyll`, `robots.txt`, `sitemap.xml`.
 - Wersja angielska: `/en/mont-blanc/` (strona ebooka) i `/en/guide/` + sześć artykułów (`booking-gouter-tete-rousse-huts`, `mont-blanc-cost`, `mont-blanc-normal-route-day-by-day`, `acclimatisation-gran-paradiso`, `mont-blanc-gear`, `mont-blanc-mistakes`), tłumaczenia fragmentów ebooka. Angielski ebook jest w przygotowaniu (tak też piszemy na stronie). Strony PL i EN są połączone `hreflang` i przełącznikiem `.lang` w nagłówku: zmieniając treść w jednej wersji, zmień też drugą. W tekstach angielskich też bez długich myślników; cudzysłowy “ ”.
 - `assets/css/site.css`, `assets/js/site.js` (nagłówek, profil wysokości rysowany przy przewijaniu, paralaksa motta), `assets/fonts/*.woff` (Inter Display, Inter, Source Serif 4, wycinki z polskimi znakami), `assets/img/*.webp`, `assets/spreads/*.webp` (podglądy stron ebooka), `assets/img/og.jpg` (obrazek do udostępniania).
-- `pliki/gpx/*.gpx` (7 śladów z wyprawy, na razie publiczne, właściciel kazał zostawić) i `pliki/mapy/map_mb_zdjecia.jpg`.
+- `pliki/gpx/*.gpx` (7 śladów z wyprawy, na razie publiczne, właściciel kazał zostawić; od 13.11.2026 oczyszczone z postojów i drgań GPS, surowe zapisy z zegarka są w `~/Developer/marcinwnuk-mb/gpx-surowe/`, skrypty w `~/Developer/marcinwnuk-mb/zrodla/gpx-czyszczenie/`) i `pliki/mapy/map_mb_zdjecia.jpg`.
 - Po zmianie CSS/JS podbij `?v=` w odnośnikach w HTML (cache).
 
 ## Zasady, których pilnować
@@ -35,6 +35,11 @@ Instrukcja dla Claude Code. Odpowiadaj po polsku. Właściciel: Marcin Wnuk (Git
 - `/mb/index.html` w tym repozytorium to już tylko przekierowanie na `https://mb.marcinwnuk.pl/`. Treść strony aktualizacji zmienia się na serwerze, nie tutaj.
 
 - Google Search Console: domena zweryfikowana (13.11.2026).
+
+## Dystanse i profil wysokości
+- Profil na `/mont-blanc/` i `/en/mont-blanc/` oraz kilometry przy dniach są liczone z oczyszczonych śladów (postój: co najmniej 10 min w promieniu 30 m; poza postojami liczą się przesunięcia o co najmniej 12 m). Razem 41,3 km. Surowe ślady dawały 59,7 km, bo zegarek dopisywał dystans na postojach.
+- Te same pliki GPX i te same kilometry muszą być na `mb.marcinwnuk.pl`. Przy zmianie śladów zaktualizować wszystkie trzy miejsca.
+- Przewyższenia („W górę”, „W dół”) są nadal z surowych śladów. Dla 13.06 wartość 1722 m jest zawyżona (z oczyszczonego śladu wychodzi ok. 1150 m). Czeka na decyzję właściciela.
 
 ## Zadania do zrobienia
 1. Po wyborze sklepu: podpiąć link w `#buyBtn` (usunąć `is-off` i `aria-disabled`, zmienić teksty w `.buy-box`), ewentualnie cenę.
