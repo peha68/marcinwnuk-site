@@ -28,5 +28,5 @@ Instrukcja dla Claude Code. Odpowiadaj po polsku. Właściciel: Marcin Wnuk (Git
 
 ## Zadania do zrobienia
 1. Subdomena `mb.marcinwnuk.pl` na cyber_Folks: szczegóły i dane serwera w `~/Developer/marcinwnuk-mb/HANDOFF.md`.
-2. Gdy `https://mb.marcinwnuk.pl` działa: zamień `/mb/index.html` w tym repozytorium na przekierowanie (meta refresh + canonical) na `https://mb.marcinwnuk.pl/` i zaktualizuj linki „Aktualizacje i pliki” w stopce oraz w sekcji zakupu na `https://mb.marcinwnuk.pl/`.
+2. Linki na `/mont-blanc/` (stopka „Aktualizacje i pliki” i sekcja zakupu) już prowadzą na `https://mb.marcinwnuk.pl/`. Gdy subdomena działa po HTTPS: zamień `/mb/index.html` w tym repozytorium na przekierowanie (meta refresh + canonical) na `https://mb.marcinwnuk.pl/`, w stopce `/mb/` i `404.html` też ustaw linki na subdomenę, usuń `/mb/` z `sitemap.xml`.
 3. Po wyborze sklepu: podpiąć link w `#buyBtn` (usunąć `is-off` i `aria-disabled`, zmienić teksty w `.buy-box`), ewentualnie cenę.
