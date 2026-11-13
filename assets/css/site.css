@@ -333,3 +333,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   .days { padding: 3vh 0 8vh; }
   .day { padding: 7vh 0 5vh; scroll-margin-top: 150px; }
 }
+/* przełącznik języka */
+.top-n .lang { opacity: .9; padding: .45rem .6rem; border: 1px solid rgba(243, 245, 242, .35); border-radius: 999px; font-size: .8rem; letter-spacing: 0; }
+.top-n .lang:hover { opacity: 1; border-color: var(--firn); }
+@media (max-width: 720px) { .top-n a.lang { display: inline-block; } }
