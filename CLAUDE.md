@@ -23,7 +23,7 @@ Instrukcja dla Claude Code. Odpowiadaj po polsku. Właściciel: Marcin Wnuk (Git
 
 ## Stan na 13.11.2026
 - DNS domeny jest w Simply.com (NIE zmieniać serwerów NS). Rekordy: 4× A i 4× AAAA GitHub Pages dla `marcinwnuk.pl`, CNAME `www` → `peha68.github.io`, A `mb` → `91.237.52.247` (serwer cyber_Folks).
-- GitHub Pages włączone (main, root). „Enforce HTTPS” czeka na certyfikat GitHuba; gdy będzie dostępne, trzeba je zaznaczyć w Settings → Pages.
+- GitHub Pages włączone (main, root), certyfikat wydany, „Enforce HTTPS” włączone (13.11.2026).
 - Przycisk „Kup ebook” jest wyłączony (`#buyBtn`, klasa `is-off`, napis „Sprzedaż rusza wkrótce”). Czeka na decyzję o sklepie (Publigo / EasyCart / Gumroad) i link.
 
 ## Subdomena mb.marcinwnuk.pl (działa od 13.11.2026)
