@@ -233,3 +233,5 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   .day { opacity: 1; }
   .day-img img { transform: none; }
 }
+
+.snt { display: inline-block; }
