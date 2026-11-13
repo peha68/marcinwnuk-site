@@ -39,7 +39,7 @@ Instrukcja dla Claude Code. Odpowiadaj po polsku. Właściciel: Marcin Wnuk (Git
 ## Dystanse i profil wysokości
 - Profil na `/mont-blanc/` i `/en/mont-blanc/` oraz kilometry przy dniach są liczone z oczyszczonych śladów (postój: co najmniej 10 min w promieniu 30 m; poza postojami liczą się przesunięcia o co najmniej 12 m). Razem 41,3 km. Surowe ślady dawały 59,7 km, bo zegarek dopisywał dystans na postojach.
 - Te same pliki GPX i te same kilometry muszą być na `mb.marcinwnuk.pl`. Przy zmianie śladów zaktualizować wszystkie trzy miejsca.
-- Przewyższenia („W górę”, „W dół”) są nadal z surowych śladów. Dla 13.06 wartość 1722 m jest zawyżona (z oczyszczonego śladu wychodzi ok. 1150 m). Czeka na decyzję właściciela.
+- Przewyższenia („W górę”, „W dół”) są liczone po oczyszczonym śladzie z modelu terenu SRTM 30 m (średnia krocząca z 5 punktów, próg 10 m, wynik zaokrąglony do 10 m), nie z barometru zegarka. Skrypty i pobrane wysokości: `~/Developer/marcinwnuk-mb/zrodla/gpx-czyszczenie/` (`dem.py`, `gain.py`, `dem_srtm.json`).
 
 ## Zadania do zrobienia
 1. Po wyborze sklepu: podpiąć link w `#buyBtn` (usunąć `is-off` i `aria-disabled`, zmienić teksty w `.buy-box`), ewentualnie cenę.
