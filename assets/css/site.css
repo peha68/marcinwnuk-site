@@ -235,3 +235,17 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 }
 
 .snt { display: inline-block; }
+/* hero: sylwetka po prawej, napis po lewej jej nie zasłania */
+@media (min-width: 861px) {
+  .hero-bg { width: 150%; max-width: none; left: -6%; object-position: 50% 32%; }
+  .hero-h { font-size: clamp(4.2rem, 10.5vw, 10rem); }
+  .hero-tx { max-width: 40vw; }
+}
+@media (min-width: 861px) and (max-aspect-ratio: 4/3) { .hero-bg { width: 190%; left: -38%; } }
+@media (max-width: 860px) {
+  .hero-bg { height: 66%; object-position: 50% 30%; }
+  .hero-shade { background: linear-gradient(180deg, rgba(15, 20, 25, .45) 0%, rgba(15, 20, 25, 0) 16%, rgba(15, 20, 25, 0) 44%, var(--granite) 66%); }
+}
+.hero-tx { text-shadow: 0 1px 14px rgba(8, 12, 16, .45); }
+.hero-by { color: #C9D7E0; }
+@media (max-width: 860px) { .hero-by { display: none; } }
