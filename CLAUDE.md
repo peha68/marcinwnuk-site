@@ -31,7 +31,7 @@ Instrukcja dla Claude Code. Odpowiadaj po polsku. Właściciel: Marcin Wnuk (Git
 ## Subdomena mb.marcinwnuk.pl (działa od 13.11.2026)
 - Strona aktualizacji i plików jest na cyber_Folks (`s138.cyber-folks.pl`, port SSH 222), w `~/domains/mb.marcinwnuk.pl/public_html/`. HTTPS z Let's Encrypt i wymuszenie HTTPS są włączone w DirectAdmin.
 - Na Macu jest wpis `mb-cyberfolks` w `~/.ssh/config` (logowanie kluczem). Wgrywanie: `rsync -rtvz -p <folder>/ mb-cyberfolks:domains/mb.marcinwnuk.pl/public_html/`.
-- `.htaccess` na serwerze ma na końcu linię `AddHandler application/x-httpd-php84 php` dodaną przez panel. Nie usuwać jej przy wgrywaniu.
+- `.htaccess` na serwerze ma na końcu linię `AddHandler application/x-httpd-php85 php` (PHP 8.5 od 14.11.2026) dodaną przez panel. Nie usuwać jej przy wgrywaniu.
 - `/mb/index.html` w tym repozytorium to już tylko przekierowanie na `https://mb.marcinwnuk.pl/`. Treść strony aktualizacji zmienia się na serwerze, nie tutaj.
 
 - Google Search Console: domena zweryfikowana (13.11.2026).
