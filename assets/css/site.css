@@ -359,3 +359,5 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .alti.is-road .alti-n, .alti.is-road .alti-u { display: block; visibility: hidden; }
 .alti.is-road .alti-r { visibility: visible; }
 @media (max-width: 860px) { .alti-r { font-size: 1rem; } }
+
+.author-soc a { color: #C4481A; }
