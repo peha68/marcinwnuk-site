@@ -26,7 +26,7 @@ Instrukcja dla Claude Code. Odpowiadaj po polsku. Właściciel: Marcin Wnuk (Git
 ## Stan na 13.11.2026
 - DNS domeny jest w Simply.com (NIE zmieniać serwerów NS). Rekordy: 4× A i 4× AAAA GitHub Pages dla `marcinwnuk.pl`, CNAME `www` → `peha68.github.io`, A `mb` → `91.237.52.247` (serwer cyber_Folks).
 - GitHub Pages włączone (main, root), certyfikat wydany, „Enforce HTTPS” włączone (13.11.2026).
-- Przycisk „Kup ebook” jest wyłączony (`#buyBtn`, klasa `is-off`, napis „Sprzedaż rusza wkrótce”). Czeka na decyzję o sklepie (Publigo / EasyCart / Gumroad) i link.
+- Przycisk „Kup ebook” (`#buyBtn`) prowadzi już do `https://sklep.marcinwnuk.pl/mont-blanc`, ale jest wyłączony (klasa `is-off`, `aria-disabled`, napis „Sprzedaż rusza wkrótce”) do czasu uruchomienia Paynow. Cena w ramce: 49 zł, cena premierowa do 31.12.2026, od 1.01.2027 59 zł (sklep przełącza się sam; na stronie trzeba wtedy zmienić tekst `.buy-price`/`.buy-promo`).
 
 ## Subdomena mb.marcinwnuk.pl (działa od 13.11.2026)
 - Strona aktualizacji i plików jest na cyber_Folks (`s138.cyber-folks.pl`, port SSH 222), w `~/domains/mb.marcinwnuk.pl/public_html/`. HTTPS z Let's Encrypt i wymuszenie HTTPS są włączone w DirectAdmin.
@@ -44,4 +44,5 @@ Instrukcja dla Claude Code. Odpowiadaj po polsku. Właściciel: Marcin Wnuk (Git
 - Przewyższenia („W górę”, „W dół”) są liczone po oczyszczonym śladzie z modelu terenu SRTM 30 m (średnia krocząca z 5 punktów, próg 10 m, wynik zaokrąglony do 10 m), nie z barometru zegarka. Skrypty i pobrane wysokości: `~/Developer/marcinwnuk-mb/zrodla/gpx-czyszczenie/` (`dem.py`, `gain.py`, `dem_srtm.json`).
 
 ## Zadania do zrobienia
-1. Po teście Paynow w sandboxie: podpiąć `https://sklep.marcinwnuk.pl/mont-blanc` w `#buyBtn` (usunąć `is-off` i `aria-disabled`, zmienić teksty w `.buy-box`), ewentualnie cenę.
+1. Po uruchomieniu Paynow (produkcja): w `#buyBtn` usunąć `is-off` i `aria-disabled`, usunąć `.buy-soon` (PL i EN).
+2. 1.01.2027: na `/mont-blanc/` zmienić cenę w `.buy-box` na 59 zł i usunąć `.buy-promo`.

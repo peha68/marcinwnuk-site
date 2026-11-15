@@ -415,3 +415,5 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   .home-cover { max-width: 240px; }
   .home-tiles { grid-template-columns: 1fr; }
 }
+.buy-price { font: 900 clamp(2.6rem, 6vw, 3.4rem)/1 var(--display); letter-spacing: -.02em; margin: 0 0 .5rem; }
+.buy-promo { font: 600 .95rem/1.4 var(--sans); color: var(--signal-2); margin: 0 0 1.3rem; }
