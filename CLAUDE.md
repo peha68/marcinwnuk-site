@@ -34,7 +34,7 @@ Instrukcja dla Claude Code. Odpowiadaj po polsku. Właściciel: Marcin Wnuk (Git
 - `.htaccess` na serwerze ma na końcu linię `AddHandler application/x-httpd-php85 php` (PHP 8.5 od 14.11.2026) dodaną przez panel. Nie usuwać jej przy wgrywaniu.
 - `/mb/index.html` w tym repozytorium to już tylko przekierowanie na `https://mb.marcinwnuk.pl/`. Treść strony aktualizacji zmienia się na serwerze, nie tutaj.
 
-- Sklep (od 14.11.2026, własny PHP, PHP 8.5): `https://mb.marcinwnuk.pl/sklep/` (formularz, Paynow v3, link do pobrania 30 dni / 5 pobrań), `/sklep/panel.php` (logowanie kontem Google), `/regulamin/`, `/prywatnosc/`. Źródła na Macu: `~/Developer/marcinwnuk-mb/sklep/` (instrukcja w `INSTRUKCJA.md`). Prywatna część (lib.php, config.php z kluczami, baza SQLite, PDF ebooka) jest na serwerze w `public_html/_prywatne/` zablokowanym `.htaccess` (`Require all denied`), bo open_basedir nie pozwala wyjść poza public_html. Klucze Paynow jeszcze nie wpisane (czeka na mBank). Faktury na życzenie firm wystawia właściciel ręcznie w mBanku.
+- Sklep: `https://sklep.marcinwnuk.pl/` (od 15.11.2026, własny PHP 8.5 na cyber_Folks, `~/domains/sklep.marcinwnuk.pl/public_html/`). Wiele ebooków: lista na `/`, strona produktu `/<klucz>` (np. `/mont-blanc`), produkty w `_prywatne/config.php` (tablica `produkty`). Paynow v3, link do pobrania 30 dni / 5 pobrań, `/panel.php` (logowanie kontem Google), `/regulamin/`, `/prywatnosc/` (ogólne, dla wszystkich ebooków). Źródła na Macu: `~/Developer/marcinwnuk-mb/sklep-marcinwnuk/` (instrukcja w `INSTRUKCJA.md`). Prywatna część (lib.php, config.php z kluczami, baza SQLite, PDF-y) w `public_html/_prywatne/` zablokowanym `.htaccess`, bo open_basedir nie pozwala wyjść poza public_html. Klucze Paynow jeszcze nie wpisane (czeka na mBank). Faktury na życzenie firm wystawia właściciel ręcznie w mBanku. Pierwsza wersja sklepu na `mb.marcinwnuk.pl/sklep/` jest nieużywana (do usunięcia lub przekierowania).
 
 - Google Search Console: domena zweryfikowana (13.11.2026).
 
@@ -44,4 +44,4 @@ Instrukcja dla Claude Code. Odpowiadaj po polsku. Właściciel: Marcin Wnuk (Git
 - Przewyższenia („W górę”, „W dół”) są liczone po oczyszczonym śladzie z modelu terenu SRTM 30 m (średnia krocząca z 5 punktów, próg 10 m, wynik zaokrąglony do 10 m), nie z barometru zegarka. Skrypty i pobrane wysokości: `~/Developer/marcinwnuk-mb/zrodla/gpx-czyszczenie/` (`dem.py`, `gain.py`, `dem_srtm.json`).
 
 ## Zadania do zrobienia
-1. Po teście Paynow w sandboxie: podpiąć `https://mb.marcinwnuk.pl/sklep/` w `#buyBtn` (usunąć `is-off` i `aria-disabled`, zmienić teksty w `.buy-box`), ewentualnie cenę.
+1. Po teście Paynow w sandboxie: podpiąć `https://sklep.marcinwnuk.pl/mont-blanc` w `#buyBtn` (usunąć `is-off` i `aria-disabled`, zmienić teksty w `.buy-box`), ewentualnie cenę.
