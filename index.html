@@ -17,7 +17,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/InterDisplay-Black.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="/assets/fonts/SourceSerif4-Regular.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css?v=16">
+<link rel="stylesheet" href="/assets/css/site.css?v=17">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Marcin Wnuk", "url": "https://marcinwnuk.pl/", "image": "https://marcinwnuk.pl/assets/img/author-960.webp", "sameAs": ["https://www.instagram.com/widoknatatry/", "https://www.youtube.com/@WidokNaTatry"]}</script>
 </head>
 <body class="pg-home">
@@ -58,7 +58,8 @@
     <p class="home-kick">Film</p>
     <h2 class="home-h">Przejście Grand Couloir</h2>
     <p class="home-p">Najbardziej znany odcinek drogi przez Goûter, nagrany kamerą GoPro. Kamienie spadają tu, gdy słońce zaczyna roztapiać lód, a&nbsp;także od drgań śmigłowców nad kuluarem. Dlatego przechodzi się go jak najwcześniej i&nbsp;z&nbsp;głową w&nbsp;górze.</p>
-    <div class="yt-home"><iframe src="https://www.youtube-nocookie.com/embed/UCgWvS7awV0?rel=0" title="Przejście Grand Couloir" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+    <div class="yt-home"><button class="yt-fac" type="button" data-yt="UCgWvS7awV0" data-title="Przejście Grand Couloir" aria-label="Odtwórz film „Przejście Grand Couloir” (6:32) z YouTube"><img src="/assets/img/film-couloir.webp" width="1280" height="720" alt="" loading="lazy"><span class="yt-play">Odtwórz film, 6:32</span></button></div>
+    <p class="yt-note">Film wczyta się z YouTube dopiero po kliknięciu. <a href="https://youtu.be/UCgWvS7awV0" rel="noopener">Otwórz na YouTube</a></p>
   </div>
 </section>
 
@@ -96,5 +97,16 @@
     <p class="foot-c">© 2026 Marcin Wnuk. Tekst i zdjęcia: Marcin Wnuk.</p>
   </div>
 </footer>
+<script>
+document.querySelectorAll('[data-yt]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + b.dataset.yt + '?rel=0&autoplay=1';
+    f.title = b.dataset.title; f.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen';
+    f.allowFullscreen = true; f.referrerPolicy = 'strict-origin-when-cross-origin';
+    b.replaceWith(f); f.focus();
+  });
+});
+</script>
 </body>
 </html>
