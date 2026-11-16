@@ -417,3 +417,9 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 }
 .buy-price { font: 900 clamp(2.6rem, 6vw, 3.4rem)/1 var(--display); letter-spacing: -.02em; margin: 0 0 .5rem; }
 .buy-promo { font: 600 .95rem/1.4 var(--sans); color: var(--signal-2); margin: 0 0 1.3rem; }
+
+/* zdjęcia w treści poradnika */
+.art-pair, .art-wide { margin: 2.2rem 0; }
+.art-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.art-pair img, .art-wide img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.art-pair figcaption, .art-wide figcaption { grid-column: 1 / -1; margin-top: .5rem; font: 400 .88rem/1.45 var(--sans); color: var(--rock); }
